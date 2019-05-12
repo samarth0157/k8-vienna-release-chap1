@@ -10,7 +10,8 @@ spec:
 
   ports:
     - name: http
-      port: 3000
-      nodePort: 30081
+      port: 31002
+      nodePort: 31001
+      targetPort: hello-port
 
   type: NodePort
