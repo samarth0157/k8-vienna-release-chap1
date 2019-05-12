@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: samarth-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - name: helloimage
+        image: sam0157/nodeimage:v4
+        ports:
+        - name: helloport
+          containerPort: 3000
+      nodeSelector:
+        hardware: high-spec
